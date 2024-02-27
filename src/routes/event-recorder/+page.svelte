@@ -20,6 +20,9 @@
 		};
 	}
 	let database: IDBPDatabase<MyDB>;
+ function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+ }
 	async function useDB() {
 		// Opens the first version of the 'test-db1' database.
 		// If the database does not exist, it will be created.
@@ -47,6 +50,7 @@
 		await db.put('events', val);
 	}
 	async function init() {
+  await sleep(500)
 		database = await useDB();
 		fetch_data();
 	}
