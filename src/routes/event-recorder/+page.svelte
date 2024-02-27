@@ -150,8 +150,7 @@
 	<h1 class="text-xl">事件记录</h1>
 
 	<p>
-		这个APP可以自定义标签；填写时间戳；生成当日记录汇总。 筛选日期； 导出日志； 清除事件；
-		事件类型：一次性、首尾呼应
+		自动生成时间戳；生成当日记录汇总。筛选日期；导出日志；清除事件。
 	</p>
 
 	<div class="flex justify-between">
@@ -194,6 +193,6 @@
 
 <style lang="postcss">
 	button {
-		@apply rounded-md bg-indigo-600 px-2 py-1 text-sm font-semibold text-white;
+		@apply rounded-md bg-indigo-600 px-2 py-1 text-sm font-semibold text-white select-none;
 	}
 </style>
