@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { format, intervalToDuration, type Duration, formatDuration } from 'date-fns';
 	import { openDB, type DBSchema, type IDBPDatabase, type StoreValue } from 'idb';
 	// Database
@@ -49,7 +49,7 @@
 	async function init() {
   if (database === (void 0)) {
     database = await useDB();
-    alert('ok')
+    await tick();
   }
 		fetch_data();
 	}
